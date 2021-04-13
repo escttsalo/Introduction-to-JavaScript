@@ -17,7 +17,11 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 18
+if(votingAge >= 18){
+  true
+  //console.log(true)
+}
 
 
 /*
@@ -30,9 +34,13 @@ Do the following:
 
    HINT: no function required
 */
+var first = 10
+var second = 30
+if(second ===30){
+  first = 20
+}
 
-
-
+//console.log(first)
 
 
 /*
@@ -45,7 +53,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let year="1999"
+//console.log(Number(year))
 
 
 
@@ -58,10 +67,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a *b
   }
-
+//console.log(multiply(2,4))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,10 +83,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(val){
+    return val * 7
 }
-
+//console.log(dogYears(3))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,9 +116,41 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight,age){
+    //Ages above 1
+    if(age >= 1){
+      //up to 5lbs
+      if(weight<=5){
+        return weight*.05;
+      }
+      //6-10 lbs
+      else if(weight>5 && weight<=10){
+        return weight*.04;
+      }
+      else if(weight>10 && weight<=15){
+        return weight*.03;
+      }
+      else{
+        return weight*.02;
+      }
+    }
+    //Ages below 1
+    else{
+      //2-4 months
+      if(age>=0.16 && age<=0.33){
+        return weight*.10;
+      }
+      //4-7 months
+      else if(age>=0.33 && age<=0.58){
+        return weight*.05;
+      }
+      //7-12 months
+      else{
+        return weight*.04;
+      }
+    }
   }
+  console.log(hungryDog(15,1))
 
 
 
@@ -147,7 +188,7 @@ function game(user, computer){
 /*
 Using the miles function below do the following:
   1. Receive a number of kilometers
-  2. Convert the number of kiolmeters received to miles
+  2. Convert the number of kilometers received to miles
   3. Return the number of miles
 */
 
