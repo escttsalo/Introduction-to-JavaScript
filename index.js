@@ -324,9 +324,17 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(param) {
+    let vows=["a","i","o","u","e"]
+    let count=0
+    for(var i = 0; i < vows.length; i++){
+      if(param.includes(vows[i])){
+        count += 1
+      }
+    }
+    return count
 }
+//console.log(vowelCounter("hello"))
 
 
 
